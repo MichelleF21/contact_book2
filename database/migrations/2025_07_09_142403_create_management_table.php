@@ -14,7 +14,8 @@ class CreateManagementTable extends Migration
     public function up()
     {
         Schema::create('management', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('managements');
             $table->timestamps();
         });
     }
